@@ -1,0 +1,622 @@
+<!-- /*
+* Template Name: Untreefolio
+* Template Author: Untree.co
+* Tempalte URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="sen.png">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+
+    <link rel="stylesheet" href="css/vendor/icomoon/style.css">
+    <link rel="stylesheet" href="css/vendor/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/vendor/animate.min.css">
+    <link rel="stylesheet" href="css/vendor/aos.css">
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vendor/jquery.fancybox.min.css">
+    <script src="https://kit.fontawesome.com/24dc276bd3.js" crossorigin="anonymous"></script>
+
+    
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body data-spy="scroll" data-target=".site-nav-target" data-offset="200">
+
+    <nav class="unslate_co--site-mobile-menu">
+      <div class="close-wrap d-flex">
+        <a href="#" class="d-flex ml-auto js-menu-toggle">
+          <span class="close-label">Close</span>
+          <div class="close-times">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+          </div>
+        </a>
+      </div>
+      <div class="site-mobile-inner"></div>
+    </nav>
+
+
+    <div class="unslate_co--site-wrap">
+
+      <div class="unslate_co--site-inner">
+
+      
+      <nav class="unslate_co--site-nav site-nav-target">
+
+        <div class="container">
+        
+          <div class="row align-items-center justify-content-between text-left">
+            <div class="col-md-5 text-right">
+              <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
+                <li>
+                  <a href="#home-section" class="nav-link">Home</a></li>
+                <li><a href="#portfolio-section" class="nav-link">Portfolio</a></li>
+                <li><a href="#about-section" class="nav-link">About</a></li>
+                
+              </ul>
+            </div>
+            <div class="site-logo pos-absolute">
+              <a href="index.html" class="unslate_co--site-logo">Sen<span>.</span></a>
+            </div>
+            <div class="col-md-5 text-right text-lg-left">
+              <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
+                <li><a href="#stats-section" class="nav-link">Stats</a></li>
+                <li><a href="#testimonial-section" class="nav-link">Testimonial</a></li>
+                
+                <li><a href="#contact-section" class="nav-link">Contact</a></li>
+              </ul>
+
+              <ul class="site-nav-ul-none-onepage text-right d-inline-block d-lg-none">
+                <li><a href="#" class="js-menu-toggle">Menu</a></li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+      </nav>
+      <!-- END nav -->
+      <div class="cover-v1 jarallax bg-light" id="home-section">
+        <div class="container">
+            <div class="row align-items-center">
+                
+                <div class="col-md-8 mx-auto text-center">
+                    <h1 class="heading gsap-reveal-hero">Arya Senoaji</h1>
+                    <h2 class="subheading gsap-reveal-hero">
+                        <span id="part1"></span>
+                        <span id="part2"></span>
+                        <span id="part3"></span>
+                    </h2>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Teks yang akan ditampilkan dengan efek ketikan
+        var textParts = [
+            "Web developer, IT helper",
+            "Music teacher (drums)",
+            "A graduate at Bangkit Academy",
+        ];
+    
+        var currentPart = 0;
+        var currentText = "";
+        var isDeleting = false;
+    
+        function typeText() {
+            var text = textParts[currentPart];
+            if (isDeleting) {
+                currentText = text.substring(0, currentText.length - 2);
+            } else {
+                currentText = text.substring(0, currentText.length + 1);
+            }
+    
+            document.getElementById('part2').textContent = currentText;
+    
+            var typeSpeed = isDeleting ? 50 : 150; // Kecepatan ketikan dan penghapusan (ms)
+    
+            if (!isDeleting && currentText === text) {
+                isDeleting = true;
+                typeSpeed = 1000; // Waktu tunggu setelah selesai ketik
+            } else if (isDeleting && currentText === "") {
+                isDeleting = false;
+                currentPart = (currentPart + 1) % textParts.length;
+                typeSpeed = 200; // Waktu tunggu sebelum memulai ketik pada bagian berikutnya
+            }
+    
+            setTimeout(typeText, typeSpeed);
+        }
+    
+        // Mulai efek ketikan
+        typeText();
+    </script>
+    
+    
+      <!-- END .cover-v1 -->
+
+
+      <div class="unslate_co--section" id="portfolio-section">
+        <div class="container">
+          <div class="section-heading-wrap text-center mb-5" data-aos="fade-up">
+            <h2 class="heading-h2 text-center divider">Portfolio</h2>
+            
+          </div>
+          
+          <div class="relative"><div class="loader-portfolio-wrap"><div class="loader-portfolio"></div></div> </div>
+          <div id="portfolio-single-holder"></div>
+
+          <div class="portfolio-wrapper">
+            
+            <div id="posts" class="row gutter-isotope-item">
+              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="portfolio-single-1.html" class="portfolio-item ajax-load-page isotope-item gsap-reveal-img" data-id="1">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-link2"></span>
+                      <div class="portfolio-item-content">
+                        <h3>achievement</h3>
+                        <p>programming, design, it</p>
+                      </div>
+                    </div>
+                    <img src="images/portfolio/certificate/cover.png" class="lazyload  img-fluid" alt="Images" />
+                  </a>
+              </div>
+              <div class="item branding packaging illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2 ">
+                <a href="portfolio-single-3.html" class="portfolio-item ajax-load-page item-portrait isotope-item gsap-reveal-img" data-id="3">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-link2"></span>
+                      <div class="portfolio-item-content">
+                        <h3>ecogreen</h3>
+                        <p>ui deisgn, machine learning model, database</p>
+                      </div>
+                    </div>
+                    <img src="images/portfolio/ecogreen.jpg" class="lazyload  img-fluid" alt="Images" />
+                  </a>
+              </div>
+
+              <div class="item branding packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="portfolio-single-4.html" class="portfolio-item isotope-item gsap-reveal-img ajax-load-page" data-id="4">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-link2"></span>
+                      <div class="portfolio-item-content">
+                        <h3>seblak web app</h3>
+                        <p>web design, web apps</p>
+                      </div>
+                    </div>
+                    <img src="images/portfolio/seblak.jpg" class="lazyload  img-fluid" alt="Images" />
+                  </a>
+              </div>
+
+              <div class="item web packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+
+                <a href="images/portfolio/polo.jpg" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="polo design for ptkai medan">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-photo2"></span>
+                      <div class="portfolio-item-content">
+                        <h3>polo design</h3>
+                        <p>for ptkai medan</p>
+                      </div>
+                    </div>
+                    <img src="images/portfolio/polo.jpg" class="lazyload  img-fluid" alt="Images" />
+                  </a>
+
+              </div>
+
+              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="portfolio-single-1 copy.html" class="portfolio-item ajax-load-page isotope-item gsap-reveal-img" data-id="1">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-link2"></span>
+                      <div class="portfolio-item-content">
+                        <h3>repairing</h3>
+                        <p>service, repair, hardware</p>
+                      </div>
+                    </div>
+                    <img src="images/portfolio/service.png" class="lazyload  img-fluid" alt="Images" />
+                  </a>
+              </div>
+
+              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="portfolio-single-3 copy.html" class="portfolio-item ajax-load-page item-portrait isotope-item gsap-reveal-img" data-id="2">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-link2"></span>
+                      <div class="portfolio-item-content">
+                        <h3>matematika smp</h3>
+                        <p>uiux design</p>
+                      </div>
+                    </div>
+                    <img src="images/SMP/splash1.png" class="lazyload  img-fluid" alt="Images" />
+                  </a>
+              </div>
+              <div class="item illustration packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="images/portfolio/drum.png" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="best drummer kapolda cup">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-photo2"></span>
+                      <div class="portfolio-item-content">
+                        <h3>best drummmer</h3>
+                        <p>at kapolda cup 2018</p>
+                      </div>
+                    </div>
+                    <img src="images/portfolio/drums.png" class="lazyload  img-fluid" alt="Images" />
+                  </a>
+                </div>
+
+              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="https://youtu.be/XFn5-FxDvxA" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="bioleaf brand">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-play_circle_filled"></span>
+                      <div class="portfolio-item-content">
+                        <h3>bioleaf etc.</h3>
+                        <p>video editing, branding</p>
+                      </div>
+                    </div>
+                    <img src="images/portfolio/bioleaf.jpg" class="lazyload  img-fluid" alt="Images" />
+                  </a>
+              </div>
+
+              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="https://youtu.be/81s0iH3GgEU" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="tokopedia x umsu ads">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-play_circle_filled"></span>
+                      <div class="portfolio-item-content">
+                        <h3>tokopedia x umsu</h3>
+                        <p>video editing, ads</p>
+                      </div>
+                    </div>
+                    <img src="images/portfolio/tokopedia.png" class="lazyload  img-fluid" alt="Images" />
+                  </a>
+              </div>
+
+              <div class="item web illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="https://youtu.be/Bl1jgVoW6UA" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="mainserong by resonance">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-photo2"></span>
+                      <div class="portfolio-item-content">
+                        <h3>resonance</h3>
+                        <p>band, music, indierock</p>
+                      </div>
+                    </div>
+                    <img src="images/portfolio/resonens.jpg" class="lazyload  img-fluid" alt="Images" />
+                  </a>
+              </div>
+
+            </div>
+            
+          </div>
+
+
+        </div>
+      </div>
+
+
+      
+
+      <div class="unslate_co--section" id="about-section">
+        <div class="container">
+          
+          
+
+          <div class="row mt-5 justify-content-between align-items-center"> 
+            <div class="col-lg-7 mb-5 mb-lg-0" data-aos="fade-up">
+              <figure class="dotted-bg">
+                <img src="images/profile.png" alt="Image" class="img-fluid">
+              </figure>
+            </div>
+            <div class="col-lg-5 pl-lg-5" data-aos="fade-up"  data-aos-delay="100">
+              <h3 class="mb-4 heading-h3">About Arya Senoaji</h3>
+              <p >A graduate of Bangkit Academy 2023 with a focus on Cloud Computing Cohort, currently studying Information Technology at the University of Muhammadiyah North Sumatra. Specializing in Web Computing, particularly Front-End development, and possessing a strong grasp of Cloud Computing,</p>
+              <p class="mb-4">I'm also a skilled drummer, music instructor, and computer technician. Excited to contribute my expertise in technology and music. Thanks for stopping by!</p>
+
+              <ul class="list-unstyled list-check d-block">
+                <li class="d-block">Web Development</li>
+                <li class="d-block">IT Consultant</li>
+                <li class="d-block">Musician</li>
+              </ul>
+             <div class="form-group row">
+    <div class="col-md-12 d-flex align-items-center justify-content-center">
+        <a href="https://drive.google.com/file/d/1km8aUZx2btk5XNtIUn1qBd2n_3s-Jx5O/view?usp=sharing" class="btn btn-primary mr-3"  rel="noopener noreferrer">Download CV</a>
+        <span class="submitting"></span>
+    </div>
+</div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="unslate_co--section section-counter bg-light" id="stats-section">
+        <div class="container">
+            <div class="section-heading-wrap text-center mb-5" data-aos="fade-up">
+                <h2 class="heading-h2 text-center divider">Stats</h2>
+            </div>
+    
+            <div class="row pt-5">
+                <div class="col-12 col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="0">
+                    <div class="counter-v1 text-center">
+                        <span class="number-wrap">
+                            <span class="number number-counter" data-number="85">0</span>
+                        </span>
+                        <span class="counter-label">Cup of Coffee</span>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+                    <div class="counter-v1 text-center">
+                        <span class="number-wrap">
+                            <span class="number number-counter" data-number="50">0</span>
+                        </span>
+                        <span class="counter-label">Clients</span>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+                    <div class="counter-v1 text-center">
+                        <span class="number-wrap">
+                            <span class="number number-counter" data-number="25">0</span>
+                        </span>
+                        <span class="counter-label">Certificate</span>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
+                    <div class="counter-v1 text-center">
+                        <span class="number-wrap">
+                            <span class="number number-counter" data-number="65">0</span>
+                        </span>
+                        <span class="counter-label">Perform</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+      <!-- END .counter -->
+
+
+      <div class="site-section unslate_co--section" id="services-section">
+        <div class="container">
+          <div class="section-heading-wrap text-center mb-5" data-aos="fade-up">
+            <h2 class="heading-h2 text-center divider">Services</h2>
+            
+          </div>
+
+          <div class="row">
+
+            <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="service d-flex h-100">
+                  <div class="service-number mr-4">
+                      <i class="fas fa-user-secret fa-2x" style="color: #3369e7;"></i>
+                  </div>
+                  <div class="service-about">
+                      <h3>IT Helper</h3>
+                      <p>Provides consultations on laptop problems or regarding technology, including laptop repairs, both software and hardware</p>
+                  </div>
+              </div>
+          </div>
+            <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="service d-flex h-100">
+                  <div class="service-number mr-4">
+                      <i class="fas fa-laptop-code fa-2x" style="color: #3369e7;"></i>
+                  </div>
+                  <div class="service-about">
+                      <h3>Web Development</h3>
+                      <p>Serving website creation, especially in the front end field, both design and implementation, such as websites for promotions and also portfolios</p>
+                  </div>
+              </div>
+          </div>
+
+            <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="service d-flex h-100">
+                  <div class="service-number mr-4">
+                      <i class="fas fa-drum fa-2x" style="color: #3369e7;"></i>
+                  </div>
+                  <div class="service-about">
+                      <h3>Drums Lesson</h3>
+                      <p>Teaches drums equipped with 5 years of experience in the field of music, and is a best drummer in the " Piala Kapolda Sumut " and many others</p>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="service d-flex h-100">
+                <div class="service-number mr-4">
+                    <i class="fas fa-layer-group fa-2x" style="color: #3369e7;"></i>
+                </div>
+                <div class="service-about">
+                    <h3>Graphic Design</h3>
+                    <p>Create designs such as poster banners, and also mockups such as jerseys and others using Corel and Adobe PS tools</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="service d-flex h-100">
+              <div class="service-number mr-4">
+                  <i class="fas fa-clapperboard fa-2x" style="color: #3369e7;"></i>
+              </div>
+              <div class="service-about">
+                  <h3>Video Editor</h3>
+                  <p>Make all types of videos such as company profile videos which use Adobe Premiere tools and similar</p>
+              </div>
+          </div>
+      </div> 
+      <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="service d-flex h-100">
+            <div class="service-number mr-4">
+                <i class="fas fa-id-badge fa-2x" style="color: #3369e7;"></i>
+            </div>
+            <div class="service-about">
+                <h3>UI/UX Design</h3>
+                <p>Create user friendly user interface or web designs using figma, maze and many more tools</p>
+            </div>
+        </div>
+    </div>
+        
+
+          </div>
+        </div>
+      </div>
+          
+
+      <div class="unslate_co--section bg-light" id="testimonial-section">
+        <div class="container">
+          <div class="section-heading-wrap text-center mb-5"  data-aos="fade-up">
+            <h2 class="heading-h2 text-center divider">Testimonials</h2>
+          </div>
+        </div>
+
+        <div class="owl-carousel testimonial-slider" data-aos="fade-up">
+          <div>
+            <div class="testimonial-v1">
+              <div class="testimonial-inner-bg">
+                <div class="testimonial-author-info">
+                  <img src="images/alep.png" alt="Image">
+                  <h3>Ahmad Barelvy</h3>
+                  <span class="d-block position">College Student at UMSU</span>
+                </div>
+                <blockquote>
+                  "Thrilled with the outstanding work by Arya, my go-to IT Helper and Video Editor. Arya seamlessly handles tech challenges and recently crafted a stellar video profile for 'BioLeaf' upon my request. The result? Exceptional visuals that perfectly capture BioLeaf's essence. Arya's talent and dedication truly elevate our collaborations!"
+                </blockquote>
+              </div>  
+            </div>
+          </div>
+
+          <div>
+            <div class="testimonial-v1">
+              <div class="testimonial-inner-bg">
+                <div class="testimonial-author-info">
+                  <img src="images/rifqi.png" alt="Image">
+                  <h3>Rifqi Adhyaksa</h3>
+                  <span class="d-block position">Founder Unseent Creative</span>
+                </div>
+                <blockquote>
+                  "Absolutely thrilled with the support I've received from Arya, my go-to IT Helper and Sales Support for application services. Arya's seamless IT solutions have ensured a smooth digital experience, while his expertise in sales has been instrumental in promoting and selling our applications. Grateful for the collaborative success and excited about achieving more together!"
+                </blockquote>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="testimonial-v1">
+              <div class="testimonial-inner-bg">
+                <div class="testimonial-author-info">
+                  <img src="images/atha.png" alt="Image">
+                  <h3>Athariq Vahmi Noer</h3>
+                  <span class="d-block position">Resonance Bassist</span>
+                </div>
+                <blockquote>
+                  Unleash your rhythmic potential with Arya, an acclaimed drummer and former Best Drummer at the North Sumatra Police Chief's Cup. Join his drum lessons and experience the thrill of becoming a percussion maestro, crafting beats that resonate with excellence and passion.
+                </blockquote>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- END testimonial -->
+      
+
+      <div class="unslate_co--section" id="contact-section">
+        <div class="container">
+          <div class="section-heading-wrap text-center mb-5"  data-aos="fade-up">
+            <h2 class="heading-h2 text-center divider">Contact Me</h2>
+          </div>
+
+
+          <div class="row justify-content-between">
+            
+            <div class="col-md-6"  data-aos="fade-up" data-aos-delay="100">
+              <form method="post" class="form-outline-style-v1" id="contactForm">
+                <div class="form-group row mb-0">
+
+                  <div class="col-lg-6 form-group">
+                    <label for="name">Name</label>
+                    <input name="name" type="text" class="form-control" id="name">
+                  </div>
+                  <div class="col-lg-6 form-group">
+                    <label for="email">Email</label>
+                    <input name="email" type="email" class="form-control" id="email">
+                  </div>
+                  <div class="col-lg-12 form-group">
+                    <label for="message">Write your message...</label>
+                    <textarea name="message" id="message" cols="30" rows="7" class="form-control"></textarea>
+                  </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-12 d-flex align-items-center">
+                      <input type="submit" class="btn btn-primary mr-3" value="Send Message">
+                      <span class="submitting"></span>
+                    </div>
+                  </div>
+              </form>
+              <div id="form-message-warning" class="mt-4"></div> 
+              <div id="form-message-success">
+                Your message was sent, thank you!
+              </div>
+
+            </div>
+
+            <div class="col-md-4"  data-aos-delay="200">
+              <div class="contact-info-v1">
+                <div class="d-block">
+                  <span class="d-block contact-info-label">Email</span>
+                  <a class="contact-info-val">aryadimascore@gmail.com</a>
+                </div>
+                <div class="d-block">
+                  <span class="d-block contact-info-label">Phone</span>
+                  <a class="contact-info-val">+62 85765193940</a>
+                </div>
+                <div class="d-block">
+                  <span class="d-block contact-info-label">Address</span>
+                  <address class="contact-info-val">Medan<br>North East Sumatra<br>Indonesia</address>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      </div> <!-- END .unslate_co-site-inner -->
+
+      <footer class="unslate_co--footer unslate_co--section"> 
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-7">
+              <div class="footer-site-logo"><a>Aryasenoaji.</a></div>
+              <ul class="list-unstyled social-icons light">
+          <li><a href="https://www.instagram.com/aryasenoaji/"><span class="icon-instagram"></span></a></li>
+          <li><a href="https://github.com/aryasenoaji"><span class="icon-github"></span></a></li>
+          <li><a href="https://www.linkedin.com/in/arya-senoaji-a2973328b/"><span class="icon-linkedin"></span></a></li>
+          <li><a href="https://wa.me/6285668882470"><span class="icon-whatsapp"></span></a></li>
+          <li><a href="https://www.cloudskillsboost.google/public_profiles/2ec6b080-1cf0-4c5b-a628-45360993af14"><span class="icon-cloud"></span></a></li>
+              </ul>
+              <p class="site-copyright"><small>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed by Sen</small></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      
+    </div>
+
+    
+    <!-- Loader -->
+    <div id="unslate_co--overlayer"></div>
+    <div class="site-loader-wrap">
+      <div class="site-loader"></div>
+    </div>
+
+    <script src="js/scripts-dist.js"></script>
+    <script src="js/main.js"></script>
+
+    
+
+  </body>
+</html>
